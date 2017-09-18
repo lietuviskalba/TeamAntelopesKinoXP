@@ -31,4 +31,28 @@ public class DBconnection {
         return null;
 
     }
+
+    public int makeUpdate(String s) throws SQLException {
+        Connection conn = getConnection();
+        int val =conn.createStatement().executeUpdate(s);
+        if(val==1)
+            System.out.println("Successfully inserted value");
+        conn.close();
+        return val;
+    }
+
+    public boolean addMovie(MovieList movieListt, String title, String des) {
+        int res = 0;
+        try {
+
+            Movie newMovie= new Movie(title,des);
+            res = makeUpdate("INSERT INTO movies(title, des) VALUES ('"+title+"','"+des+"')");
+            if(res==1) {
+                movieListt.movies.add(newMovie);
+            }
+        } catch (Exception e ) {
+            e.printStackTrace();
+        }
+        return res==1;
+    }
 }
