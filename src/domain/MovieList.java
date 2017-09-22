@@ -1,4 +1,6 @@
-package sample;
+package domain;
+import database.MovieCRUD;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,5 +9,8 @@ import java.util.List;
  */
 public class MovieList {
 
-    List<Movie> movies = new ArrayList<Movie>();
+
+    public List<Movie> movies = new ArrayList<>();
+
+
 }

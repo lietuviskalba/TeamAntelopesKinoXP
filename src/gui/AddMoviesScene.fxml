@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AddMovieController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -17,9 +16,9 @@
    <children>
       <Label text="Title" />
       <Label text="Description" GridPane.rowIndex="1" />
-      <TextField GridPane.columnIndex="1" />
-      <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button mnemonicParsing="false" text="Add" GridPane.rowIndex="2" />
+      <TextField fx:id="titleInput" onAction="#btnAddMovie" promptText="Title" styleClass="persistent-prompt" stylesheets="@stylish.css" GridPane.columnIndex="1" />
+      <TextArea fx:id="descInput" onDragDetected="#btnAddMovie" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button fx:id="addMovie" mnemonicParsing="false" onAction="#btnAddMovie" text="Add" GridPane.rowIndex="2" />
       <Button mnemonicParsing="false" text="Button" />
       <Button mnemonicParsing="false" text="Menu" GridPane.columnIndex="1" GridPane.rowIndex="2" />
    </children>

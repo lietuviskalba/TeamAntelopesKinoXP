@@ -1,4 +1,4 @@
-package sample;
+package domain;
 /**
  * Created by ADMIN on 18/09/2017.
  */
