@@ -1,9 +1,11 @@
-package sample;
+package gui;
 
+import database.DBconnection;
 import javafx.fxml.FXML;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -13,11 +15,8 @@ import static javax.swing.JOptionPane.YES_OPTION;
 
 public class DeleteMoviesSceneController {
 
-    public static void main(String[] args) throws SQLException {
-    }
-
     @FXML
-    void deleteButton(ActionEvent event) throws SQLException {
+    void btnDeleteMovie() throws SQLException {
         String titleDel = "a Film";
 
         String message = "Do you wish to delete the selected film?";
@@ -41,6 +40,14 @@ public class DeleteMoviesSceneController {
         } else if (dialogue == NO_OPTION) {
             System.out.println("Cancelled");
 
+        }
+    }
+    @FXML
+    void btnMenu(){
+        try{
+            SceneManager.getInstance().loadMainScene();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

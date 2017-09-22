@@ -1,4 +1,7 @@
-package sample;
+package database;
+
+import domain.Movie;
+import domain.MovieList;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,9 +10,9 @@ import java.sql.SQLException;
 public class DBconnection {
     private final static String url = "jdbc:mysql://localhost:3306/";
     //    private final static String url = "jdbc:mysql://52.29.93.75:3306/";
-    private final static String DB_NAME = "teamantelopeskinoxp";
+    private final static String DB_NAME = "kinoxp";
     private final static String USER = "root";
-    private final static String PASS = "%password%";
+    private final static String PASS = "";
 
 
 
@@ -46,7 +49,7 @@ public class DBconnection {
         try {
 
             Movie newMovie= new Movie(title,des);
-            res = makeUpdate("INSERT INTO movies(title, des) VALUES ('"+title+"','"+des+"')");
+            res = makeUpdate("INSERT INTO movielist(title, description) VALUES ('"+title+"','"+des+"')");
             if(res==1) {
                 movieListt.movies.add(newMovie);
             }
