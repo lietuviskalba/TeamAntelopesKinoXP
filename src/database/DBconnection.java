@@ -75,18 +75,4 @@ public class DBconnection {
             System.out.println(m.getDes());
         }
     }
-    public boolean addMovie(MovieList movieList, String title, String des) {
-        int res = 0;
-        try {
-
-            Movie newMovie= new Movie(title, "",des, 0);
-            res = makeUpdate("INSERT INTO movies(title, description) VALUES ('"+title+"','"+des+"')");
-            if(res==1) {
-                movieList.getTheMovieList().add(newMovie);
-            }
-        } catch (Exception e ) {
-            e.printStackTrace();
-        }
-        return res==1;
-    }
 }

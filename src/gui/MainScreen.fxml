@@ -14,7 +14,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" text="Login" />
+            <Button mnemonicParsing="false" onAction="#btnLogin" text="Login" />
          </children>
       </GridPane>
       <GridPane layoutX="100.0" layoutY="364.0">
@@ -26,8 +26,8 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="mainAdd" mnemonicParsing="false" text="Add" />
-            <Button fx:id="mainDelete" mnemonicParsing="false" text="Delete" GridPane.columnIndex="1" />
+            <Button fx:id="mainAdd" mnemonicParsing="false" onAction="#btnMainAdd" text="Add" />
+            <Button fx:id="mainDelete" mnemonicParsing="false" onAction="#btnDelete" text="Delete" GridPane.columnIndex="1" />
          </children>
       </GridPane>
       <TableView fx:id="movies" layoutX="115.0" layoutY="82.0" prefHeight="200.0" prefWidth="347.0">

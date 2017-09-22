@@ -24,15 +24,14 @@ public class Controller implements Initializable {
     @FXML
     public TableColumn<Movie , String> movieDes;
     @FXML
-    public Button mainAdd;
+    private Button mainAdd;
     @FXML
-    public Button mainDelete;
+    private Button mainDelete;
     @FXML
     public TableView<Movie> movies;
 
 
     public void initializeMovieTable() {
-
 
         movies.setEditable(true);
         movieName.setCellValueFactory(new PropertyValueFactory<>("title"));
