@@ -4,14 +4,17 @@ import domain.Movie;
 import domain.MovieList;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class Controller {
+public class Controller implements Initializable {
 
     private MovieList moviess = MovieList.getInstance();
     private ObservableList<Movie> movieList = moviess.getTheMovieList();
@@ -64,4 +67,13 @@ public class Controller {
             e.printStackTrace();
         }
     }
-}
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+        initializeMovieTable();
+
+        }
+
+    }
+

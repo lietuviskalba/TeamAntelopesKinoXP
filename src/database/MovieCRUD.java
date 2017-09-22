@@ -10,7 +10,8 @@ public class MovieCRUD {
 
 public boolean addMovieDB(Movie movie){
     try {
-        String sql = "INSERT INTO movielist VALUES('" + movie.getTitle() +"', '" + movie.getDes() +"');";
+        String sql = "INSERT INTO movies VALUES('" + movie.getTitle() +"', " +
+                "'" + movie.getDirector() +"',  '" + movie.getDes() +"', '" + movie.getDuration() +"');";
 
         Connection con = DBconnection.getConnection();
         Statement stmt = con.createStatement();

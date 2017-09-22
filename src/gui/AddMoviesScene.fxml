@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -12,14 +14,19 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <Label text="Title" />
-      <Label text="Description" GridPane.rowIndex="1" />
+      <Label text="Description" GridPane.rowIndex="3" />
       <TextField fx:id="titleInput" onAction="#btnAddMovie" promptText="Title" styleClass="persistent-prompt" stylesheets="@stylish.css" GridPane.columnIndex="1" />
-      <TextArea fx:id="descInput" onDragDetected="#btnAddMovie" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button fx:id="addMovie" mnemonicParsing="false" onAction="#btnAddMovie" text="Add" GridPane.rowIndex="2" />
-      <Button mnemonicParsing="false" text="Button" />
-      <Button mnemonicParsing="false" text="Menu" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <TextArea fx:id="descInput" onDragDetected="#btnAddMovie" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button fx:id="addMovie" mnemonicParsing="false" onAction="#btnAddMovie" text="Add" GridPane.rowIndex="4" />
+      <Button mnemonicParsing="false" text="Menu" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <TextField fx:id="dirInput" onAction="#btnAddMovie" promptText="John Doe" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Director" GridPane.rowIndex="1" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" GridPane.rowIndex="2" />
+      <TextField fx:id="durInput" onAction="#btnAddMovie" promptText="100 min" GridPane.columnIndex="1" GridPane.rowIndex="2" />
    </children>
 </GridPane>

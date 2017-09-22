@@ -63,23 +63,23 @@ public class DBconnection {
         try {
             ResultSet result = makeQuery("select * from movies");
             while(result.next()){
-                Movie toAdd= new Movie(result.getString("title"),result.getString("description"));
+                Movie toAdd= new Movie(result.getString("title"),"", result.getString("description"), 0);
                 movieList.getTheMovieList().add(toAdd);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        closeConnection();
+        //closeConnection();
         //TODO remove, this is just for debugging
         for(Movie m: movieList.getTheMovieList()){
-            System.out.println(m);
+            System.out.println(m.getDes());
         }
     }
     public boolean addMovie(MovieList movieList, String title, String des) {
         int res = 0;
         try {
 
-            Movie newMovie= new Movie(title,des);
+            Movie newMovie= new Movie(title, "",des, 0);
             res = makeUpdate("INSERT INTO movies(title, description) VALUES ('"+title+"','"+des+"')");
             if(res==1) {
                 movieList.getTheMovieList().add(newMovie);

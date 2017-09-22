@@ -21,12 +21,6 @@ public class Controller {
     public TextArea des;
     @FXML
     public Button addMovie;
-    public void addMovieButton(ActionEvent event){
 
-        if(event.getSource().equals(mainAdd)){
 
-            db.addMovie(movies,title.getText(),des.getText());
-
-        }
-    }
 }
