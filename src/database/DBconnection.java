@@ -63,7 +63,7 @@ public class DBconnection {
         try {
             ResultSet result = makeQuery("select * from movies");
             while(result.next()){
-                Movie toAdd= new Movie(result.getString("title"),"", result.getString("description"), 0);
+                Movie toAdd= new Movie(result.getString("titles"),"", result.getString("description"), 0);
                 movieList.getTheMovieList().add(toAdd);
             }
         } catch (SQLException e) {

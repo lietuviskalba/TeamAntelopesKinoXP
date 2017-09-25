@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 
 import java.io.IOException;
 import java.net.URL;
@@ -35,7 +36,9 @@ public class Controller implements Initializable {
 
         movies.setEditable(true);
         movieName.setCellValueFactory(new PropertyValueFactory<>("title"));
+        movieName.setCellFactory(TextFieldTableCell.forTableColumn());
         movieDes.setCellValueFactory(new PropertyValueFactory<>("des"));
+        movieDes.setCellFactory(TextFieldTableCell.forTableColumn());
         movies.setItems(movieList);
 
     }
