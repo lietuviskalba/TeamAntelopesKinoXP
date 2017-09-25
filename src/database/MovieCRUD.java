@@ -19,7 +19,7 @@ public boolean addMovieDB(MovieList movieList, Movie movie){
         getId.next();
         int id =getId.getInt(1)+1;
         String sql = "INSERT INTO movies VALUES('" + movie.getTitle() +"', " +
-                "'" + movie.getDirector() +"',  '" + movie.getDes() +"', '" + movie.getDuration() +"', '" + movie.getId() +"');";
+                "'" + movie.getDirector() +"',  '" + movie.getDes() +"', '" + movie.getDuration() +"', '" + id +"');";
 
 
 

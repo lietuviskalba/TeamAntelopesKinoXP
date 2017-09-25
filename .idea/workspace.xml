@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/DBconnection.java" afterPath="$PROJECT_DIR$/src/database/DBconnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/Controller.java" afterPath="$PROJECT_DIR$/src/gui/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/DeleteMoviesScene.fxml" afterPath="$PROJECT_DIR$/src/gui/DeleteMoviesScene.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/DeleteMoviesSceneController.java" afterPath="$PROJECT_DIR$/src/gui/DeleteMoviesSceneController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/MovieCRUD.java" afterPath="$PROJECT_DIR$/src/database/MovieCRUD.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -102,11 +99,11 @@
       <file leaf-file-name="MovieCRUD.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/database/MovieCRUD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+            <state relative-caret-position="566">
+              <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1506323738929" expanded="true" signature="468:651" ph="INSERT INTO movies... " />
+                <marker date="1506328377738" expanded="true" signature="468:640" ph="INSERT INTO movies... " />
               </folding>
             </state>
           </provider>
@@ -251,13 +248,13 @@
         <option value="$PROJECT_DIR$/src/gui/SceneManager.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/domain/MovieList.java" />
-        <option value="$PROJECT_DIR$/src/database/MovieCRUD.java" />
         <option value="$PROJECT_DIR$/src/domain/Movie.java" />
         <option value="$PROJECT_DIR$/src/gui/DeleteMoviesScene.fxml" />
         <option value="$PROJECT_DIR$/src/gui/Delete.java" />
         <option value="$PROJECT_DIR$/src/gui/DeleteMoviesSceneController.java" />
         <option value="$PROJECT_DIR$/src/database/DBconnection.java" />
         <option value="$PROJECT_DIR$/src/gui/Controller.java" />
+        <option value="$PROJECT_DIR$/src/database/MovieCRUD.java" />
       </list>
     </option>
   </component>
@@ -865,7 +862,7 @@
       <workItem from="1506313072091" duration="1718000" />
       <workItem from="1506314802402" duration="36000" />
       <workItem from="1506314846396" duration="3215000" />
-      <workItem from="1506321701090" duration="6530000" />
+      <workItem from="1506321701090" duration="6565000" />
     </task>
     <task id="LOCAL-00001" summary="Abdallah commit">
       <created>1505725525095</created>
@@ -916,11 +913,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506323828197</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Delete function implemented">
+      <created>1506328362868</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1506328362868</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41465000" />
+    <option name="totallyTimeSpent" value="41500000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -1011,7 +1015,8 @@
     <MESSAGE value="Created packages, screens connected, login created." />
     <MESSAGE value="Edit function coded" />
     <MESSAGE value="Fixed edit function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed edit function" />
+    <MESSAGE value="Delete function implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete function implemented" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1455,11 +1460,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/MovieCRUD.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        <state relative-caret-position="566">
+          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1506323738929" expanded="true" signature="468:651" ph="INSERT INTO movies... " />
+            <marker date="1506328377738" expanded="true" signature="468:640" ph="INSERT INTO movies... " />
           </folding>
         </state>
       </provider>
