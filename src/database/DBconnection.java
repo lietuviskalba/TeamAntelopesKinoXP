@@ -61,9 +61,13 @@ public class DBconnection {
 
     public void loadMovies(MovieList movieList) {
         try {
+            ResultSet getId=makeQuery("select max(id) from movies");
+            getId.next();
+            int id =getId.getInt(1);
             ResultSet result = makeQuery("select * from movies");
             while(result.next()){
-                Movie toAdd= new Movie(result.getString("titles"),"", result.getString("description"), 0);
+                Movie toAdd= new Movie(result.getString("title"),"", result.getString("description"), 0);
+                toAdd.setId(id);
                 movieList.getTheMovieList().add(toAdd);
             }
         } catch (SQLException e) {

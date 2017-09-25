@@ -14,6 +14,7 @@ public class Movie {
     private StringProperty director= new SimpleStringProperty(this,"director","unknown");
     private StringProperty des = new SimpleStringProperty(this,"description","unknown");
     private IntegerProperty duration = new SimpleIntegerProperty(this, "duration",0);
+    int id;
 
     public Movie(StringProperty title, StringProperty director, StringProperty des, IntegerProperty duration) {
         this.title = title;
@@ -78,28 +79,35 @@ public class Movie {
         this.duration.set(duration);
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     private void setListeners(){
-        String oldTitle = this.getTitle();
         title.addListener(
 
                 (v, oldValue, newValue)->{
-                    MovieList.getInstance().updateMovie(this, "titles", newValue,oldTitle);
+                    MovieList.getInstance().updateMovie(this, "title", newValue);
                 });
         director.addListener(
                 //this is a lambda expression,
                 (v, oldValue, newValue)->{
-                    MovieList.getInstance().updateMovie(this, "director", newValue,oldTitle);
+                    MovieList.getInstance().updateMovie(this, "director", newValue);
                 });
         des.addListener(
                 //this is a lambda expression,
                 (v, oldValue, newValue)->{
-                    MovieList.getInstance().updateMovie(this, "description", newValue,oldTitle);
+                    MovieList.getInstance().updateMovie(this, "description", newValue);
                 });
         duration.addListener(
                 //this is a lambda expression,
                 (v, oldValue, newValue)->{
                     String duration = Integer.toString(newValue.intValue());
-                    MovieList.getInstance().updateMovie(this, "duration", duration,oldTitle);
+                    MovieList.getInstance().updateMovie(this, "duration", duration);
                 });
 
     }

@@ -32,23 +32,12 @@ public class MovieList {
         db.loadMovies(this);
     }
 
-    public void updateMovieTitle(Movie toUpdate, String column, String newValue){
-        DBconnection db = new DBconnection();
-        String column1 = "titles";
-        System.out.println(column);
-        System.out.println(column1);
-        System.out.println(newValue);
-        try {
-            db.makeUpdate("UPDATE movies SET "+column+"='"+newValue+"' WHERE titles="+toUpdate.getTitle());
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
 
-    public void updateMovie(Movie toUpdate, String column, String newValue, String oldValue){
+    public void updateMovie(Movie toUpdate, String column, String newValue){
         DBconnection db = new DBconnection();
+        System.out.println(toUpdate.getId());
         try {
-            db.makeUpdate("UPDATE movies SET "+column+"='"+newValue+"' WHERE titles="+oldValue);
+            db.makeUpdate("UPDATE movies SET "+column+"='"+newValue+"' WHERE id="+toUpdate.getId());
         } catch (SQLException e) {
             e.printStackTrace();
         }
