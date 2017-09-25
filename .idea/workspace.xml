@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/DBconnection.java" afterPath="$PROJECT_DIR$/src/database/DBconnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/AddMovieController.java" afterPath="$PROJECT_DIR$/src/gui/AddMovieController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/AddMoviesScene.fxml" afterPath="$PROJECT_DIR$/src/gui/AddMoviesScene.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,7 +71,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBconnection.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DBconnection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/database/DBconnection.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="635">
@@ -125,11 +122,9 @@
       <file leaf-file-name="DeleteMoviesSceneController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/DeleteMoviesSceneController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
+            <state relative-caret-position="114">
               <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding>
-                <element signature="e#2261#2262#0" expanded="true" />
-                <element signature="e#2287#2288#0" expanded="true" />
                 <marker date="1506327165076" expanded="true" signature="1364:1439" ph="SELECT id FR... movies" />
                 <marker date="1506327165076" expanded="true" signature="1364:1469" ph="SELECT id FR... movies" />
                 <marker date="1506327165076" expanded="true" signature="1627:1702" ph="DELETE FROM " />
@@ -176,11 +171,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Delete.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Delete.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gui/Delete.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="26" column="33" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="26" selection-end-column="36" />
+            <state relative-caret-position="375">
+              <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#400#408#0" expanded="true" />
@@ -863,7 +858,7 @@
       <workItem from="1506314802402" duration="36000" />
       <workItem from="1506314846396" duration="3215000" />
       <workItem from="1506321701090" duration="7240000" />
-      <workItem from="1506329061315" duration="1096000" />
+      <workItem from="1506329061315" duration="1647000" />
     </task>
     <task id="LOCAL-00001" summary="Abdallah commit">
       <created>1505725525095</created>
@@ -928,11 +923,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506328383756</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Delete function implemented">
+      <created>1506330839019</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1506330839019</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43271000" />
+    <option name="totallyTimeSpent" value="43822000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -1357,34 +1359,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/Delete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="26" column="33" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="26" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#400#408#0" expanded="true" />
-            <marker date="1506325172905" expanded="true" signature="585:668" ph="SELECT title... movies" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/DeleteMoviesSceneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="e#2261#2262#0" expanded="true" />
-            <element signature="e#2287#2288#0" expanded="true" />
-            <marker date="1506327165076" expanded="true" signature="1364:1439" ph="SELECT id FR... movies" />
-            <marker date="1506327165076" expanded="true" signature="1364:1469" ph="SELECT id FR... movies" />
-            <marker date="1506327165076" expanded="true" signature="1627:1702" ph="DELETE FROM " />
-            <marker date="1506327165076" expanded="true" signature="1627:1709" ph="DELETE FROM " />
-            <marker date="1506327165076" expanded="true" signature="1627:1710" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/database/MovieCRUD.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="725">
@@ -1459,6 +1433,32 @@
           <caret line="93" column="21" lean-forward="true" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/DeleteMoviesSceneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <marker date="1506327165076" expanded="true" signature="1364:1439" ph="SELECT id FR... movies" />
+            <marker date="1506327165076" expanded="true" signature="1364:1469" ph="SELECT id FR... movies" />
+            <marker date="1506327165076" expanded="true" signature="1627:1702" ph="DELETE FROM " />
+            <marker date="1506327165076" expanded="true" signature="1627:1709" ph="DELETE FROM " />
+            <marker date="1506327165076" expanded="true" signature="1627:1710" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/Delete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#400#408#0" expanded="true" />
+            <marker date="1506325172905" expanded="true" signature="585:668" ph="SELECT title... movies" />
           </folding>
         </state>
       </provider>
