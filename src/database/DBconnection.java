@@ -2,6 +2,7 @@ package database;
 
 import domain.Movie;
 import domain.MovieList;
+import javafx.collections.ObservableList;
 
 import java.sql.*;
 
@@ -66,7 +67,7 @@ public class DBconnection {
             int id =getId.getInt(1);
             ResultSet result = makeQuery("select * from movies");
             while(result.next()){
-                Movie toAdd= new Movie(result.getString("title"),"", result.getString("description"), 0);
+                Movie toAdd= new Movie(result.getString("titles"),"", result.getString("description"), 0);
                 toAdd.setId(id);
                 movieList.getTheMovieList().add(toAdd);
             }
@@ -78,5 +79,18 @@ public class DBconnection {
         for(Movie m: movieList.getTheMovieList()){
             System.out.println(m.getDes());
         }
+    }
+
+    public boolean deleteMovie(MovieList movies, Movie byeMovie) {
+        try {
+            boolean flag= makeUpdate("DELETE FROM movies WHERE id="+byeMovie.getId())==1;
+            ObservableList<Movie> motorhomeList = movies.getTheMovieList();
+            if(flag) motorhomeList.remove(byeMovie);
+            return flag;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        closeConnection();
+        return false;
     }
 }

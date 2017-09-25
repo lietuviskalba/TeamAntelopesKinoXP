@@ -1,5 +1,6 @@
 package gui;
 
+import database.DBconnection;
 import domain.Movie;
 import domain.MovieList;
 import javafx.collections.ObservableList;
@@ -19,6 +20,7 @@ public class Controller implements Initializable {
 
     private MovieList moviess = MovieList.getInstance();
     private ObservableList<Movie> movieList = moviess.getTheMovieList();
+    DBconnection db = new DBconnection();
 
     @FXML
     public TableColumn<Movie , String> movieName;
@@ -30,6 +32,8 @@ public class Controller implements Initializable {
     private Button mainDelete;
     @FXML
     public TableView<Movie> movies;
+
+
 
 
     public void initializeMovieTable() {
@@ -63,11 +67,8 @@ public class Controller implements Initializable {
 
     @FXML
     private void btnDelete(){
-        try{
-            SceneManager.getInstance().loadDeleteMovieScene();
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+        Movie byeMovie = movies.getSelectionModel().getSelectedItem();
+        if(!db.deleteMovie(moviess,byeMovie));
     }
 
     @Override
