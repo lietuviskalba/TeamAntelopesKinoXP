@@ -84,8 +84,8 @@ public class DBconnection {
     public boolean deleteMovie(MovieList movies, Movie byeMovie) {
         try {
             boolean flag= makeUpdate("DELETE FROM movies WHERE id="+byeMovie.getId())==1;
-            ObservableList<Movie> motorhomeList = movies.getTheMovieList();
-            if(flag) motorhomeList.remove(byeMovie);
+            ObservableList<Movie> moviess = movies.getTheMovieList();
+            if(flag) moviess.remove(byeMovie);
             return flag;
         } catch (SQLException e) {
             e.printStackTrace();

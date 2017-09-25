@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 
 
 /**
@@ -33,7 +34,7 @@ public class AddMovieController {
 
 
     @FXML
-    private void btnAddMovie(){
+    private void btnAddMovie() {
 
         String title = titleInput.getText();
         String director = dirInput.getText();
@@ -42,18 +43,27 @@ public class AddMovieController {
         String dur = durInput.getText();
 
 
-
-            if(title.isEmpty() || desc.isEmpty() || director.isEmpty() || dur.isEmpty()) {
-                SceneManager.getInstance().displayError("Missing Info", null, "Please fill all fields");
-            }else{
-                movies.addMovieDB(moviess, new Movie(title, director, desc, duration));
-                titleInput.clear();
-                dirInput.clear();
-                durInput.clear();
-                descInput.clear();
-                SceneManager.getInstance().displayInformation("Movie saved!", null, "Movie has been saved!");
-            }
+        if (title.isEmpty() || desc.isEmpty() || director.isEmpty() || dur.isEmpty()) {
+            SceneManager.getInstance().displayError("Missing Info", null, "Please fill all fields");
+        } else {
+            movies.addMovieDB(moviess, new Movie(title, director, desc, duration));
+            titleInput.clear();
+            dirInput.clear();
+            durInput.clear();
+            descInput.clear();
+            SceneManager.getInstance().displayInformation("Movie saved!", null, "Movie has been saved!");
+        }
     }
 
+    @FXML
+    private void btnMenu() {
+        try {
+            SceneManager.getInstance().loadMainScene();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+    }
+}
+
+
 
