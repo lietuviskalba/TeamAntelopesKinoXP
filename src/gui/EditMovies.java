@@ -16,16 +16,6 @@ import java.sql.Statement;
  */
 public class EditMovies {
 
-    private  String name;
-
-    public EditMovies(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
     public void editMovieButton(String whichMovie, String editTitle, String editDirector, String editDescription, int editDuration){
 
         try {
