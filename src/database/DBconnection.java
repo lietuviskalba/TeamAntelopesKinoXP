@@ -1,5 +1,7 @@
 package database;
 
+import domain.Booking;
+import domain.BookingList;
 import domain.Movie;
 import domain.MovieList;
 import javafx.collections.ObservableList;
@@ -78,6 +80,27 @@ public class DBconnection {
         //TODO remove, this is just for debugging
         for(Movie m: movieList.getTheMovieList()){
             System.out.println(m.getDes());
+        }
+    }
+
+    public void loadBookings(BookingList bookingList) {
+        try {
+            ResultSet getId=makeQuery("select max(id) from bookings");
+            getId.next();
+            int id =getId.getInt(1);
+            ResultSet result = makeQuery("select * from bookings");
+            while(result.next()){
+                Booking toAdd= new Booking(result.getString("name"),result.getString("email"),result.getInt("tel"),result.getInt("time"),result.getString("movietitle"));
+                toAdd.setId(id);
+                bookingList.getTheBookingList().add(toAdd);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        //closeConnection();
+        //TODO remove, this is just for debugging
+        for(Booking b: bookingList.getTheBookingList()){
+            System.out.println(b.getTitle());
         }
     }
 

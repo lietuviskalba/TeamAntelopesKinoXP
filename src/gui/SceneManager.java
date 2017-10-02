@@ -34,6 +34,12 @@ public class SceneManager {
         primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("movies.png")));
     }
 
+    public void loadUserScene() throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/gui/UserMainScreen.fxml"));
+        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("movies.png")));
+    }
+
     void loadAddMovieScene() throws IOException {
         Parent movieRoot = FXMLLoader.load(getClass().getResource("/gui/AddMoviesScene.fxml"));
         Scene addMovieScene = new Scene(movieRoot, 600, 400);
@@ -49,6 +55,12 @@ public class SceneManager {
         Parent deleteRoot = FXMLLoader.load(getClass().getResource("/gui/DeleteMoviesScene.fxml"));
         Scene deleteMovieScene = new Scene(deleteRoot, 600, 400);
         primaryStage.setScene(deleteMovieScene);
+    }
+
+    void loadBookingScene() throws IOException{
+        Parent loginRoot = FXMLLoader.load(getClass().getResource("/gui/BookingMovieScene.fxml"));
+        Scene loginScene = new Scene(loginRoot, 600, 400);
+        primaryStage.setScene(loginScene);
     }
 
     void displayError(String title, String header, String content) {

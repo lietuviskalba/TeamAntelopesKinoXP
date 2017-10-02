@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         SceneManager.getInstance().setStage(primaryStage);
         primaryStage.setTitle("Kino XP");
-        SceneManager.getInstance().loadMainScene();
+        SceneManager.getInstance().loadUserScene();
         primaryStage.show();
     }
 

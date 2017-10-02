@@ -37,10 +37,11 @@ public class MovieList {
         DBconnection db = new DBconnection();
         System.out.println(toUpdate.getId());
         try {
-            db.makeUpdate("UPDATE movies SET "+column+"='"+newValue+"' WHERE id="+toUpdate.getId());
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
 
-}
+            db.makeUpdate("UPDATE movies SET "+column+"='"+newValue+"' WHERE id="+toUpdate.getId());
+                    } catch (SQLException e) {
+                    e.printStackTrace();
+                    }
+                    }
+
+                    }
