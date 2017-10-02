@@ -13,16 +13,24 @@ public class Login {
     private static final String USERNAME = "admin";
     private static final String PASSWORD = "kinoXP";
 
+    //stuff needed for testing
+    public String getNameAndPassowrd(){
+        String namePass = USERNAME+PASSWORD;
+        return  namePass;
+    }
+
     @FXML
     private TextField username;
 
     @FXML
     private PasswordField password;
 
-    private boolean loginOk(String username, String password) {
+    //TODO change to private after done testing
+    public boolean loginOk(String username, String password) {
         return (USERNAME.equals(username) && PASSWORD.equals(password));
     }
 
+    //TODO change to a private after done with testing
     @FXML
     private void btnLogin() {
         String user = username.getText();

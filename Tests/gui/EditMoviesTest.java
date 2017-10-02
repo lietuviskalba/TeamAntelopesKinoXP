@@ -14,18 +14,14 @@ import static org.junit.Assert.*;
  * Created by Mantas_MSI on 22-Sep-17.
  */
 public class EditMoviesTest {
-    EditMovies editMovies    = new EditMovies("EditMovies");
+    EditMovies editMovies    = new EditMovies();
 
+    //see if it works
     @Test
-    public  void className() throws  Exception{
-        assertEquals("EditMovies", editMovies.getName());
-    }
-
-    @Test
-    public  void getMovieTitle() throws  Exception{
-        //get the movie title from DB
-
+    public  void Test00SeeIfWorks() throws  Exception{
         assertEquals(1, 1);
     }
+    //We did not do any more test as we used a lambda expression.
+
 
 }
