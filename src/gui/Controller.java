@@ -51,8 +51,6 @@ public class Controller implements Initializable {
 
 
     public void initializeMovieTable() {
-
-        movies.setEditable(true);
         movieName.setCellValueFactory(new PropertyValueFactory<>("title"));
         movieName.setCellFactory(TextFieldTableCell.forTableColumn());
         movieDes.setCellValueFactory(new PropertyValueFactory<>("des"));
@@ -64,14 +62,7 @@ public class Controller implements Initializable {
 
     }
 
-    @FXML
-    private void btnMainAdd() {
-        try {
-            SceneManager.getInstance().loadAddMovieScene();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+
 
     @FXML
     private void btnLogin(){
@@ -82,11 +73,7 @@ public class Controller implements Initializable {
         }
     }
 
-    @FXML
-    private void btnDelete(){
-        Movie byeMovie = movies.getSelectionModel().getSelectedItem();
-        if(!db.deleteMovie(moviess,byeMovie));
-    }
+
 
     @FXML
     public ChoiceBox selectTime;
